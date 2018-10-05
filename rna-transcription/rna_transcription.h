@@ -14,8 +14,9 @@ using std::string;
 using std::to_string;
 using std::transform;
 
-map<char, char> transcription{make_pair('G', 'C'), make_pair('C', 'G'),
-                              make_pair('T', 'A'), make_pair('A', 'U')};
+static const map<char, char> transcription{
+    make_pair('G', 'C'), make_pair('C', 'G'), make_pair('T', 'A'),
+    make_pair('A', 'U')};
 
 char to_rna(char nucleotide) {
   auto transcribed = transcription.find(nucleotide);

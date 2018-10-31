@@ -30,7 +30,7 @@ string decode(const string& text) {
   std::stringstream ss;
 
   for (auto& letter : text) {
-    if (letter == ' ') continue;
+    if (isspace(letter)) continue;
     ss << from[to.find(letter)];
   }
   return ss.str();

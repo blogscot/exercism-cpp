@@ -1,7 +1,5 @@
 #include "./meetup.h"
 
-#include <iostream>
-
 namespace meetup {
 
 scheduler_day get_next_weekday(scheduler_day day) {

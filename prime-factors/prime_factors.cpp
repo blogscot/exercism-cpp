@@ -9,16 +9,13 @@ vector<int> of(const int input) {
   vector<int> primes{};
   int i = 2;
 
-  while (i * i <= input) {
+  while (number > 1) {
     if (number % i == 0) {
       primes.push_back(i);
       number /= i;
     } else {
       ++i;
     }
-  }
-  if (number > 1) {
-    primes.push_back(number);
   }
   return primes;
 }

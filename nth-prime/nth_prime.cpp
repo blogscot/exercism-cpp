@@ -12,7 +12,7 @@ int nth(int number) {
     throw std::domain_error("nth: Invalid argument!");
   }
   vector<int> primes{2};
-  int value{2};
+  int value{3};
   auto is_prime = false;
 
   while (primes.size() != number) {
@@ -20,12 +20,13 @@ int nth(int number) {
     for (auto& prime : primes) {
       if (value % prime == 0) {
         is_prime = false;
+        break;
       }
     }
     if (is_prime) {
       primes.push_back(value);
     }
-    value++;
+    value += 2;
   }
   return primes.back();
 }

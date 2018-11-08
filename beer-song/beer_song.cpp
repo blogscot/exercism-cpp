@@ -36,7 +36,7 @@ struct bottle_msgs {
       auto how_many_bottles = to_string(num_bottles);
       auto bottles = " bottles";
       msgs.how_many = how_many_bottles + bottles;
-      msgs.how_many_second = how_many_bottles + " bottles";
+      msgs.how_many_second = how_many_bottles + bottles;
       msgs.instruction = "Take one down and pass it around";
       msgs.how_many_final = to_string(num_bottles - 1) + bottles;
     }

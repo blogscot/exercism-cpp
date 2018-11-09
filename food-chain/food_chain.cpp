@@ -83,7 +83,7 @@ struct old_lady_msgs {
   }
 };
 
-string verse(uint8_t num) {
+auto verse(uint8_t num) -> string {
   using food_chain::creatures;
   std::stringstream ss;
   auto msgs = old_lady_msgs::get_msgs(num);
@@ -104,7 +104,7 @@ string verse(uint8_t num) {
   ss << msgs.outro;
   return ss.str();
 }
-std::string verses(uint8_t start, uint8_t end) {
+auto verses(uint8_t start, uint8_t end) -> string {
   using food_chain::creatures;
   assert(start < end && end <= HORSE);
   std::stringstream ss;
@@ -115,6 +115,6 @@ std::string verses(uint8_t start, uint8_t end) {
   }
   return ss.str();
 }
-std::string sing() { return verses(1, 8); }
+auto sing() -> string { return verses(1, 8); }
 
 }  // namespace food_chain

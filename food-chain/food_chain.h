@@ -5,9 +5,9 @@
 
 namespace food_chain {
 
-std::string verse(uint8_t);
-std::string verses(uint8_t, uint8_t);
-std::string sing();
+auto verse(uint8_t) -> std::string;
+auto verses(uint8_t, uint8_t) -> std::string;
+auto sing() -> std::string;
 
 }  // namespace food_chain
 

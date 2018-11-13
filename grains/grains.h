@@ -14,7 +14,11 @@ auto square = [](uint8_t value) -> uint64_t {
   return static_cast<u_int64_t>(std::pow(2, value - 1));
 };
 auto total = []() -> uint64_t {
-  return static_cast<u_int64_t>(std::pow(2, NUM_SQUARES)) - 1;
+  uint64_t sum{0};
+  for (int i = 1; i <= NUM_SQUARES; ++i) {
+    sum += square(i);
+  }
+  return sum;
 };
 
 }  // namespace grains
